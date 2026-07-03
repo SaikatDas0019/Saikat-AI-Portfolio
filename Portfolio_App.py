@@ -141,7 +141,7 @@ elif choice == "Recognize Clothes":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key="clothes")
 
     if uploaded_file is not None:
-        image_array, _ = upload_image(uploaded_file, target_size=(1, 28, 28, 1))
+        image_array, _ = upload_image(uploaded_file, target_size=(28, 28))
         display_image = Image.open(uploaded_file)
         st.image(display_image, caption='Uploaded Image', use_container_width=True)
         
@@ -161,6 +161,7 @@ elif choice == "Recognize Clothes":
                 base_dir = Path(__file__).resolve().parent
                 model = load_model(base_dir / "Model" / "04_A_mnist_cnn_m2_trained_model.keras")
 
+                image_array = np.array(image_array).reshape(1, 28, 28, 1)
                 # Make prediction
                 prediction = model.predict(image_array)
                 predicted_class = np.argmax(prediction)
