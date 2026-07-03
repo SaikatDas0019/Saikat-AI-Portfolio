@@ -103,8 +103,9 @@ elif choice == "Recognize Number":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key= "mnist")
 
     if uploaded_file is not None:
+        original_image = Image.open(uploaded_file)
         image_array, original_image = upload_image(uploaded_file, target_size=(28, 28))
-        st.image(original_image, caption='Uploaded Image', use_column_width=True, width=150)
+        st.image(original_image, caption='Uploaded Image', use_container_width=True)
         
         st.write("")
         col1, col2, col3 = st.columns([1, 1, 1])
