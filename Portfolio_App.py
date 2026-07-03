@@ -1,14 +1,23 @@
 # --------------------------------------------------
 # Project: AI Portfolio Web App
 # --------------------------------------------------
-from pathlib import Path
 
+from pathlib import Path
 import joblib
 import streamlit as st
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image, ImageOps
+
+# 1. file upload option
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+
+if uploaded_file is not None:
+    original_image = Image.open(uploaded_file)
+    
+    st.image(original_image, caption='Uploaded Image', use_container_width=True)
+    
 
 # Website page setup
 st.set_page_config(page_title="Saikat AI Portfolio", page_icon="🦾", layout="wide")
