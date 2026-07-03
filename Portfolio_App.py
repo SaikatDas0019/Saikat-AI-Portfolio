@@ -104,7 +104,7 @@ elif choice == "Recognize Number":
 
     if uploaded_file is not None:
         original_image = Image.open(uploaded_file)
-        image_array, original_image = upload_image(uploaded_file, target_size=(28, 28))
+        image_array, original_image = upload_image(uploaded_file, target_size=(1, 28, 28, 1))
         st.image(original_image, caption='Uploaded Image', use_container_width=True)
         
         st.write("")
@@ -141,7 +141,7 @@ elif choice == "Recognize Clothes":
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key="clothes")
 
     if uploaded_file is not None:
-        image_array, _ = upload_image(uploaded_file, target_size=(28, 28))
+        image_array, _ = upload_image(uploaded_file, target_size=(1, 28, 28, 1))
         display_image = Image.open(uploaded_file)
         st.image(display_image, caption='Uploaded Image', use_container_width=True)
         
