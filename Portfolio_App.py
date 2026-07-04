@@ -19,10 +19,10 @@ st.write("---")
 
 # Sundor kore 4 ti box ba column toyri kora.
 
-Recognize_Number = st.button("**1. Recognize Number:**\nIf you give me a picture of any handwritten number from 0 to 9, my AI can recognize it.", use_container_width=True)
-Recognize_Clothes = st.button("**2. Recognize Clothes:**\nIf you give a picture of a T-shirt, shoe, or bag, the model will scan it and tell you what it is.", use_container_width=True)
-Review_Analysis = st.button("**3. Review Analysis:**\nIf you give a review of any movie or product, the model will tell you whether it is positive or negative.", use_container_width=True)
-Spam_Email_Detector = st.button("**4. Spam Email Detector:**\nThe model will be able to read an email and determine whether it is a real email or a spam.", use_container_width=True)
+Recognize_Number = st.button("**1. Recognize Number:**\nIf you give me a picture of any handwritten number from 0 to 9, my AI can recognize it.", width="stretch")
+Recognize_Clothes = st.button("**2. Recognize Clothes:**\nIf you give a picture of a T-shirt, shoe, or bag, the model will scan it and tell you what it is.", width="stretch")
+Review_Analysis = st.button("**3. Review Analysis:**\nIf you give a review of any movie or product, the model will tell you whether it is positive or negative.", width="stretch")
+Spam_Email_Detector = st.button("**4. Spam Email Detector:**\nThe model will be able to read an email and determine whether it is a real email or a spam.", width="stretch")
 
 if Recognize_Number:
     st.switch_page("pages\Recognize_Number.py")
