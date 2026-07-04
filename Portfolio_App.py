@@ -25,13 +25,13 @@ Review_Analysis = st.button("**3. Review Analysis:**\nIf you give a review of an
 Spam_Email_Detector = st.button("**4. Spam Email Detector:**\nThe model will be able to read an email and determine whether it is a real email or a spam.", width="stretch")
 
 if Recognize_Number:
-    st.switch_page("pages\Recognize_Number.py")
+    st.switch_page("pages/Recognize_Number.py")
 
 elif Recognize_Clothes:
-    st.switch_page("pages\Recognize_Clothes.py")
+    st.switch_page("pages/Recognize_Clothes.py")
 
 elif Review_Analysis:
-    st.switch_page("pages\Review_Analysis.py")
+    st.switch_page("pages/Review_Analysis.py")
 
 elif Spam_Email_Detector:
-    st.switch_page("pages\Spam_Email_Detector.py")
+    st.switch_page("pages/Spam_Email_Detector.py")
