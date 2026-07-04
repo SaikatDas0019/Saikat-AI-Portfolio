@@ -16,6 +16,8 @@ st.write("This is a prtfolio of models I've built using Machine Learning over th
 
 st.write("---")
 
+st.header("AI Projects")
+
 
 # Sundor kore 4 ti box ba column toyri kora.
 
