@@ -3,4 +3,8 @@ tensorflow-cpu
 Pillow
 numpy
 joblib
+<<<<<<< HEAD
 scikit-learn
+=======
+scikit-learn
+>>>>>>> 49211eeabf3a53a160a60ad0bd29bd5e64beff7f
